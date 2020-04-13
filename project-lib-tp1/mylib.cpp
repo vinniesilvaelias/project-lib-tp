@@ -315,7 +315,6 @@ char* verify(char* s, int quoc){
         str[0] = quoc+'0';
         for(i=1;i<size;i++) str[i] = s[i-1];
         str[i] = 0;
-        delete s;
         return str;
     }
     else

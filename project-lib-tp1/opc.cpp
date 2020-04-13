@@ -390,8 +390,8 @@ void opc18(){
         gets(str1);
         char* p = str;
         char* q = str1;
-        char* sum = soma_numeros_gigantes( p, q);
-        cout <<"\n=> TOTAL = " <<sum << endl;
+        char* sum = soma_numeros_gigantes(p,q);
+        cout <<"\n=> TOTAL = " << sum << endl;
         delete [] sum;
         cout << "\n\n>> MENU PRINCIPAL [0]\n>> CONTINUAR      [1]\n>> ";
         cin >> x;
@@ -405,18 +405,21 @@ void opc19(){
     while (x) {
         int v[1000];
         int n,i;
+        int less;
+        int greater;
         string m = "[19]  MAIOR E MENOR DO VETOR";
         menu(m);
         cout << "\n>> INFORME A QUANTIDADE DE NUMEROS: ";
         cin >> n;
+        if(n == 1)
+           greater = less = 0;
         for( i=0;i<n;i++){
             cout << "\n>> INFORME O TERMO " << i+1 <<" : ";
             cin>>v[i];
         }
         v[i] = 0;
         int* p = v;
-        int less;
-        int greater;
+
         search(p, greater, less);
         cout <<"\n=> INDICE DO MAIOR: " << greater
              <<"\n=> INDICE DO MENOR: " <<less;

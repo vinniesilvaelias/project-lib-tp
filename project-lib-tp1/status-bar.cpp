@@ -1,16 +1,16 @@
-#include<iostream>
-using namespace std;
+#include"mylib.h"
 void statusbar(){
-    int sizebar = 50,i,percent = 0;
-    string ch = "[#";
-    for(i=0;i<sizebar;i++){
-        cout <<"LOADING "<<percent<<" % "<< ch << "] ";
-        ch+="#";
-        percent+=2;
-        _sleep(25);
-        system("cls");
+    string stbar = "";
+    int size = 50,i,percent = 0;
+    for(i=0;i<size;i++) {
+       stbar+='\xDB';
+       cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLOADING "
+            << percent<<" % "<< stbar;
+       percent+=2;
+       system("cls");
     }
-    cout <<"LOADING "<<percent<<" %"<< ch << "] ";
-    _sleep(1000);
-    system("cls");
+    cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLOADING "
+         <<percent<<" % "<< stbar << '\n';
+         _sleep(1000);
+         system("cls");
 }
