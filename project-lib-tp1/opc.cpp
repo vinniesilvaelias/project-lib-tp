@@ -362,8 +362,8 @@ void opc17(){
         string str1;
         getline(cin, str1);
         int pos = find(str, str1);
-        if(pos > (int) str.length() && pos > (int)str.length()){
-            cout << "\n=> " << str1 <<"NAO ESTA CONTIDA EM "<<str<<"\n";
+        if(pos > (int) str.length()){
+            cout << "\n=> " << str1 <<" NAO ESTA CONTIDA EM "<<str<<"\n";
         }
         else{
             cout << "\n=> " << str1 <<" ESTA NA POSICAO "<< pos
